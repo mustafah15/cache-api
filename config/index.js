@@ -7,5 +7,8 @@ module.exports = {
         collections: {
             cache: 'cache',
         },
+        express: {
+            port: 4090,
+        },
     },
 };
