@@ -15,6 +15,7 @@ module.exports = () => {
     databaseConnection = mongoose.connect(mongodbUrl, {
         useNewUrlParser: true,
         useCreateIndex: true,
+        useUnifiedTopology: true,
         useFindAndModify: false,
     });
 
