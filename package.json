@@ -1,0 +1,43 @@
+{
+  "name": "cache-api",
+  "version": "0.0.0",
+  "license": "UNLICENSED",
+  "author": "Mustafah15 <mustafa.hussain93@gmail.com>",
+  "description": "cache api",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mustafah15/cache-api.git"
+  },
+  "engine": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "main": "./index",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha ./test/ --exit --recursive --timeout=60000",
+    "coverage": "./node_modules/.bin/nyc ./node_modules/.bin/mocha ./test/ --recursive --timeout=60000 --exit",
+    "lint": "./node_modules/.bin/eslint ./src/ ./test/ ./index.js",
+    "docker": "docker-compose build --no-cache && docker-compose run node",
+    "depcheck": "./node_modules/.bin/npm-check"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-subset": "^1.6.0",
+    "eslint": "^6.1.0",
+    "eslint-config-guardians-labs": "^1.0.0",
+    "mocha": "^6.2.0",
+    "npm-check": "^5.9.0",
+    "nyc": "^14.1.1",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "mongodb": "^3.2.7",
+    "mongoose": "^5.6.13",
+    "mongoose-paginate-v2": "^1.3.0"
+  }
+}
