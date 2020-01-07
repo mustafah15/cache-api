@@ -32,7 +32,7 @@ class CacheRepository {
             result.cache = await this.model.create(params);
             result.created = true;
         } else {
-            if (Date.parse(cache.updated_at) + (cache.ttl * 1000) < Date.now()) {
+            if(Date.parse(cache.updated_at) + (cache.ttl * 1000) < Date.now()) {
                 cache.data = Math.random().toString(36).slice(2);
                 cache.updated_at = new Date();
                 cache.save();
