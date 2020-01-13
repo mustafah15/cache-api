@@ -17,7 +17,7 @@
     "test": "./node_modules/mocha/bin/mocha ./test/ --exit --recursive --timeout=60000",
     "coverage": "./node_modules/.bin/nyc ./node_modules/.bin/mocha ./test/ --recursive --timeout=60000 --exit",
     "lint": "./node_modules/.bin/eslint ./src/ ./test/ ",
-    "docker": "docker-compose build --no-cache && docker-compose run node",
+    "docker": "docker-compose up -d && docker exec -it cache-api bash",
     "depcheck": "./node_modules/.bin/npm-check"
   },
   "devDependencies": {
