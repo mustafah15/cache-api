@@ -4,7 +4,13 @@ This project is provides APIs for CRUD operations to cache resources and it hand
 
 ## installation
 
-- run the docker image it will build the project and all it's dependencies
+- run the docker image it will build the project container and all it's dependencies
+
+-  for starting the server 
+```
+npm run start
+```
+
 ```
 cp .env-example .env
 npm run docker
@@ -20,10 +26,6 @@ npm run lint
 - for checking tests coverage
 ```
 npm run coverage
-```
-- and for starting the server 
-```
-npm runs server
 ```
 
 ##  usage
